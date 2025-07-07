@@ -11,5 +11,5 @@ if "%1" == "release" (
 
 IF NOT EXIST ..\build mkdir ..\build
 pushd ..\build
-clang-cl ..\code\main.c %cl_optimization% raylib.lib gdi32.lib winmm.lib user32.lib kernel32.lib shell32.lib msvcrt.lib /I C:\raylib\w64devkit\x86_64-w64-mingw32\include /link /LIBPATH:C:\raylib\w64devkit\x86_64-w64-mingw32\lib /NODEFAULTLIB:libcmt
+clang-cl ..\src\main.c %cl_optimization% raylib.lib gdi32.lib winmm.lib user32.lib kernel32.lib shell32.lib msvcrt.lib /I ..\src\external\raylib\include /link /LIBPATH:..\src\external\raylib\lib /NODEFAULTLIB:libcmt
 popd
